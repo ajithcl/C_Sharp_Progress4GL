@@ -33,13 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="guestProxxy">
-      <HintPath>.\guestProxxy.dll</HintPath>
+    <Reference Include="GuestProxy">
+      <HintPath>.\GuestProxy.dll</HintPath>
     </Reference>
-    <Reference Include="Progress.Messages">
+    <Reference Include="Progress.Messages, Version=11.7.0.1684, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>.\Progress.Messages.dll</HintPath>
     </Reference>
-    <Reference Include="Progress.o4glrt">
+    <Reference Include="Progress.o4glrt, Version=11.7.0.1684, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>.\Progress.o4glrt.dll</HintPath>
     </Reference>
     <Reference Include="System" />

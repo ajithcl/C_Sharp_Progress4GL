@@ -13,8 +13,9 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        guestProxxy objGuest = null;
+        GuestProxy objGuest = null;
         protected string guestNumber;
+
         public Form1()
         {
             InitializeComponent();
@@ -32,8 +33,13 @@ namespace WindowsFormsApp1
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
-            objGuest.guest(Convert.ToInt32(guestNumber), out string guestName);
-            System.Windows.Forms.MessageBox.Show(guest);
+            objGuest.guest(Convert.ToInt32(guestNumber), 
+                           out string guestName,
+                           out string guestAddress,
+                           out string guestCountry);
+            txtGuestName.Text = guestName;
+            txtCountry.Text = guestCountry;
+            txtAddress.Text = guestAddress;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -45,7 +51,7 @@ namespace WindowsFormsApp1
             try 
             { 
                 Connection objCon = new Connection("appserver://NLBAVWSLDEV01:5162/asbroker1", "", "", "");
-                objGuest = new guestProxxy(objCon);
+                objGuest = new GuestProxy(objCon);
                 return true;
             }
             catch(Exception ex)
