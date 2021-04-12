@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Progress.Open4GL.Proxy;
 
+/*
+ * Ref: http://www.oehive.org/node/903.html
+ */
+
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
