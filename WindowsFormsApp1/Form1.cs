@@ -32,8 +32,8 @@ namespace WindowsFormsApp1
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
-            objGuest.guest(guestNumber, out string guestName);
-            System.Windows.Forms.MessageBox.Show(guestNumber);
+            objGuest.guest(Convert.ToInt32(guestNumber), out string guestName);
+            System.Windows.Forms.MessageBox.Show(guest);
         }
 
         private void label2_Click(object sender, EventArgs e)
